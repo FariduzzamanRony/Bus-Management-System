@@ -1,0 +1,15 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Counter extends Model
+{
+
+  protected $fillable=['counter','totle_counter'];
+  public function totle_sub_counter()
+  {
+      return $this->hasMany('App\Sub_counter');
+  }
+}
